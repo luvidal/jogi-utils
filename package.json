@@ -1,5 +1,5 @@
 {
-  "name": "@avd/nextjs-utils",
+  "name": "@jogi/nextjs-utils",
   "version": "0.1.0",
   "private": true,
   "main": "dist/index.js",
