@@ -25,6 +25,11 @@
       "types": "./dist/jwt.d.ts",
       "import": "./dist/jwt.mjs",
       "require": "./dist/jwt.js"
+    },
+    "./apihandler": {
+      "types": "./dist/apihandler.d.ts",
+      "import": "./dist/apihandler.mjs",
+      "require": "./dist/apihandler.js"
     }
   },
   "files": [

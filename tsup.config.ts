@@ -6,6 +6,7 @@ export default defineConfig({
     ratelimit: 'src/ratelimit.ts',
     sse: 'src/sse.ts',
     jwt: 'src/jwt.ts',
+    apihandler: 'src/apihandler.ts',
   },
   format: ['cjs', 'esm'],
   dts: true,
