@@ -3,4 +3,3 @@ export { SSEEmitter, SSEEmitterOptions } from './sse.mjs';
 export { JwtAuth, JwtAuthConfig, createJwtAuth } from './jwt.mjs';
 export { createApiHandler } from './apihandler.mjs';
 import 'next';
-import 'events';

@@ -1,4 +1,3 @@
-import { EventEmitter } from 'events';
 import { SignJWT, jwtVerify } from 'jose';
 
 // src/ratelimit.ts
@@ -32,9 +31,10 @@ function checkRateLimit(req, limit, windowMs = 6e4, message) {
   const result = rateLimit(key, limit, windowMs);
   return { ...result, response: message ?? DEFAULT_MSG };
 }
-var SSEEmitter = class extends EventEmitter {
+
+// src/sse.ts
+var SSEEmitter = class {
   constructor(options = {}) {
-    super();
     this.clients = /* @__PURE__ */ new Map();
     this.sweepTimer = null;
     this.maxClients = options.maxClientsPerUser ?? 5;

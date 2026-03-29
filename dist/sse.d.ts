@@ -1,4 +1,3 @@
-import { EventEmitter } from 'events';
 import { NextApiResponse } from 'next';
 
 interface SSEEmitterOptions {
@@ -12,7 +11,7 @@ interface SSEEmitterOptions {
         action: string;
     }) => void;
 }
-declare class SSEEmitter extends EventEmitter {
+declare class SSEEmitter {
     private clients;
     private sweepTimer;
     private maxClients;

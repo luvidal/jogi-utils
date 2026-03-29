@@ -1,4 +1,3 @@
-import { EventEmitter } from 'events'
 import type { NextApiResponse } from 'next'
 
 interface SSEClient {
@@ -15,14 +14,13 @@ export interface SSEEmitterOptions {
   onError?: (error: unknown, context: { userId: string; action: string }) => void
 }
 
-export class SSEEmitter extends EventEmitter {
+export class SSEEmitter {
   private clients: Map<string, SSEClient[]> = new Map()
   private sweepTimer: ReturnType<typeof setInterval> | null = null
   private maxClients: number
   private onError?: SSEEmitterOptions['onError']
 
   constructor(options: SSEEmitterOptions = {}) {
-    super()
     this.maxClients = options.maxClientsPerUser ?? 5
     this.onError = options.onError
 

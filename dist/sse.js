@@ -1,11 +1,8 @@
 'use strict';
 
-var events = require('events');
-
 // src/sse.ts
-var SSEEmitter = class extends events.EventEmitter {
+var SSEEmitter = class {
   constructor(options = {}) {
-    super();
     this.clients = /* @__PURE__ */ new Map();
     this.sweepTimer = null;
     this.maxClients = options.maxClientsPerUser ?? 5;
